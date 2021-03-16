@@ -26,7 +26,6 @@ function drawSprite(img: CanvasImageSource, sourceX: number, sourceY: number, so
   ctx.drawImage(img, sourceX, sourceY, sourceW, sourceH, destinationX, destinationY, destinationWidth, destinationHeight);
 }
 function Animate() {
-  console.log('next frame');
   //Clear Canvas and Draw Background
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(Background, 0, 0, canvas.width, canvas.height);
