@@ -7,8 +7,8 @@ canvas.height = 800;
 const keys: any = {};
 
 const player = {
-  x: 0,
-  y: 0,
+  x: <number>0,
+  y: <number>0,
   width: 32,
   height: 48,
   frameX: 0,
@@ -31,9 +31,21 @@ function Animate() {
   ctx.drawImage(Background, 0, 0, canvas.width, canvas.height);
 
   //Draw Player
-  drawSprite(PlayerSprite, 0, 0, player.width, player.height, player.x, player.y, player.width*(1.5/(window.innerWidth/window.innerHeight)), player.height*1.5);
+  drawSprite(PlayerSprite, player.frameX, player.frameY,player.width, player.height, player.x, player.y, player.width * (1.5 / (window.innerWidth / window.innerHeight)), player.height * 1.5);
   //Next Frame
   requestAnimationFrame(Animate);
+  if (keys["ArrowDown"] == true && player.y <= canvas.height-player.height) {
+    player.y = player.y + player.speed;
+  }
+  if (keys["ArrowUp"] == true && player.y >= 0) {
+    player.y = player.y - player.speed;
+  }
+  if (keys["ArrowRight"] == true && player.x <= canvas.width-player.width) {
+    player.x = player.x + player.speed;    
+  }
+  if (keys["ArrowLeft"] == true && player.x >= 0) {
+    player.x = player.x - player.speed;
+  }
 }
 
 Animate();
