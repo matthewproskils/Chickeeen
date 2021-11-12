@@ -68,7 +68,7 @@ function onKeyPress(k, player)
 {
   if (isCollidingEgg)
   {
-    k.go("insideCoop")
+    // k.go("insideCoop")
   } else if (isCollidingDoor)
   {
     k.go("coop")

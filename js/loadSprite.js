@@ -1,4 +1,5 @@
 export default function loadSprite(k) {
+  k.loadRoot(window.location.href)
   k.loadSprite('chicken', 'sprites/SpriteSheet.png', {
     sliceX: 6,
     sliceY: 3,
