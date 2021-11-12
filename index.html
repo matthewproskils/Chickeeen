@@ -1,17 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/index.css">
-  <title>Document</title>
+  <title>Chicken</title>
+  <meta charset="utf-8">
+  <style>
+    * {
+      margin: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #container {
+      width: 95vw;
+      height: 90vw;
+      /* height:width * 100 ratio*/
+      background: black;
+      max-height: 95vh;
+      max-width: 111.11vh;
+      /* width:height ratio * 100 */
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      /* vertical center */
+      left: 0;
+      right: 0;
+      /* horizontal center */
+      padding: 0;
+
+    }
+
+    #gamediv {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    #game {
+      image-rendering: optimizeSpeed;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -o-crisp-edges;
+      image-rendering: pixelated;
+      -ms-interpolation-mode: nearest-neighbor;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 
 <body>
-  <canvas id="CanvasContiner"></canvas>
-  <script src="/build/index.js"></script>
+  <div id="container">
+    <div id="gamediv">
+      <canvas id="game">
+    </div>
+  </div>
+
+  <script type="module" src="./js/index.js"></script>
 </body>
 
 </html>
