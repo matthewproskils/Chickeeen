@@ -6,6 +6,7 @@ export default function ChickenMovement(k, chicken, spaceDown)
     if (chicken.grounded())
     {
       chicken.jump(400)
+      chicken.play('jump')
     }
   }
 
@@ -61,7 +62,7 @@ export default function ChickenMovement(k, chicken, spaceDown)
   k.onKeyPress('space', () =>
   {
     spaceDown(k, chicken)
-    jump
+    jump()
   })
 
   k.onKeyPress('w', jump)

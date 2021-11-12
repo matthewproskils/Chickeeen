@@ -35,8 +35,7 @@ k.scene('coop', () =>
     if (chicken.dir != "stop")
     {
       chicken.move(chicken.dir.scale(200))      
-    } else if (chicken.animplaying)
-    {
+    } else if (chicken.isGrounded()){
       chicken.stop()
       chicken.frame = 0
       chicken.animplaying = false;
@@ -62,8 +61,7 @@ k.scene('insideCoop', () =>
     if (chicken.dir != "stop")
     {
       chicken.move(chicken.dir.scale(200))      
-    } else if (chicken.animplaying)
-    {
+    } else if (chicken.isGrounded()){
       chicken.stop()
       chicken.frame = 0
       chicken.animplaying = false;
